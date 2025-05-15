@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subburathinam</title>
+    <link rel="stylesheet" href="index_files/css/style.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- animation on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <!-- Email JS
+        1. Intialization Code -->
+<!-- EmailJS Initialization -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
+            <script type="text/javascript">
+              (function() {
+              emailjs.init("XYSAGh6C6mm2vljVD");
+              })(); 
+    </script>
+    <script src="./index_files/js/script.js" defer></script>
+
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  
+</head>
+<body>
+
+ <!-- HOME SECTION -->
+
+ <header class="header ">
+    <a href="#" class="logo"><span class="log-span">Subbu</span>soft</a>
+    <!-- Sidebar -->
+    <nav class="navbar">
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>  </a></li>
+            <li><a href="#home" class="nav-link" onclick="navigateToSection('#home')">Home</a></li>
+            <li><a href="#about" class="nav-link" onclick="navigateToSection('#about')">About</a></li>
+            <li><a href="#skill" class="nav-link" onclick="navigateToSection('#skill')">Skill</a></li>
+            <li><a href="#project" class="nav-link" onclick="navigateToSection('#project')">Project</a></li>
+            <li><a href="#education" class="nav-link" onclick="navigateToSection('#education')">Education</a></li>
+        </ul>
+        <ul class="hide-on-mobile">
+            <li><a href="#home"  class="nav-link" onclick="home()">Home</a></li>
+            <li><a href="#about"  class="nav-link" onclick="biodata()">About</a></li> 
+            <li><a href="#skill"  class="nav-link" onclick="skill()">Skill</a></li>
+            <li><a href="#project"  class="nav-link" onclick="project()">Project</a></li>
+            <li><a href="#education"  class="nav-link" onclick="contact()">Education</a></li>
+        </ul>
+        <li class="menu-button" onclick="showSidebar()">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
+            </a>
+        </li>
+    </nav>
+    <a href="#contact" class="contact-link nav-link hide-on-mobile" onclick="navigateToSection('#contact')" >Hire Me</a>
+</header>
+
+<!-- ionIcons -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- home section -->
+
+        <section class="home-section " id="home">
+            <div class="home-content"  data-aos="fade-down">
+                <h3>Hi, I'm </h3>
+                <h1><span class="log-span">Subburathinam M 👋<br></span></h1>
+                <h3>I am a Java <span class="word-moving">Full Stack Developer</span></h3>
+                <!-- prargaph -->
+                <p>Proficient in front-end and back-end development using HTML, CSS, JavaScript, React, and Node.js. 
+                    Recently completed my degree and several projects that showcase my understanding of full stack development. 
+                    Excited to join a team where I can contribute and learn in a dynamic environment.</p>
+
+<!-- Buttons -->
+                    <div class="btn-box" data-aos="fade-down">
+                        <a href="#"><button class="btn-1" onclick="downloadCV()">Download CV</button></a>
+                        <a href="#contact" onclick="navigateToSection('#contact')"><button class="btn-2" >Hire Me</button></a>
+                    </div> 
+<!-- social ionIcons -->
+                    <div class="social-link"  data-aos="fade-left">
+                        <a href="https://www.linkedin.com/in/subburathinam22/" class="linkedin-icon" target="_blank"   data-aos-delay="250" >
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="github-icon" data-aos-delay="300">
+                             <i class="fa-brands fa-github"></i>
+                            </a>
+                        <a href="#" class="hackerrank-icon" data-aos-delay="350">
+                            <i class="fa-brands fa-hackerrank"></i>
+                        </a>
+                        <a href="mailto:subburathinam720@gmail.com?subject=From%20Portfolio&body=from:%20" class="gmail-icon" data-aos-delay="400">
+                            <i class='bx bxl-gmail'></i>
+                        </a> 
+                    </div> 
+            </div> 
+
+            <!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"> </script> -->
+            <!-- <a href="#"><ion-icon name="logo-github"></ion-icon></a> -->
+
+<!-- my image -->
+    
+            <div class="img-box">
+                <img src="/images/subbu.jpeg" alt="Profile-img" class="hide-on-mobile">
+            </div>
+
+        </section> 
+
+
+ <!-- ABOUT SECTION -->
+
+
+    <section class="about-section" id="about">
+
+        <div class="about-img">
+            <img src="images/subbu.jpeg" alt="Profile-img" class="hide-on-mobile">
+        </div>
+
+        <div class="about-content"   >
+            <h2 class="heading" data-aos="fade-down">
+                About
+                 <span>Me</span>
+                </h2>
+            <h3 data-aos="fade-down" data-aos-delay="250" >
+                Full Stack
+                 <span class="log-span">Developer</span>
+            </h3>
+            <p data-aos="fade-down" data-aos-delay="300">
+                I am a recent graduate with a Bachelor’s degree in Information Technology and Engineering,achieving a CGPA of 7.94.
+                I am skilled in <span>C</span>,<span>SQL</span>,<span>Core Java</span>,<span>HTML</span>,<span>CSS</span>,<span>JavaScript</span>, and
+                I participated in training at Titan to enhance my abilities. Currently, I am further enhancing my  Java skills at Besant Technologies. 
+                I am excited to begin my career journey as a fresher and eager to contribute to company growth.
+            </p>
+                <a href="#project1" class="btn-1 nav-link" data-aos="fade-down" data-aos-delay="200">
+                    Experience
+                </a>
+        </div>
+    </section>
+
+
+<!-- EDUCTION SECTION -->
+
+        <section class="education-section" id="education" >
+            <div class="education-content   "onclick="biodata()">
+                <h2 class="section-title"  data-aos="fade-down" >Education</h2>
+                <div class="left-section" data-aos="fade-down" data-aos-delay="200" >
+                    <img src="/images/undraw_certificat_edu-section.svg" class="img1  hide-on-mobile" alt="undraw_certificat">
+                </div>
+                <div class="right-section">
+                    <div class="education-item"  data-aos="fade-down" data-aos-delay="250">
+                        <div class="education-header">
+                            <a href="https://mvit.edu.in/" target="_blank"><img src="/images/mit_log_edu_section.jpg" alt="Mit collage logo"></a>
+                            <div class="education-details">
+                                <h3>B.TECH INFORMATION TECHNOLOGY</h3>
+                                <ul>
+                                    <li>Manakula Vinayagar Institute of Technology</li>
+                                    <li>CGPA: 7.94</li>
+                                    <li>Year of Graduation: 2023</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="education-item" data-aos="fade-down" data-aos-delay="300">
+                        <div class="education-header">
+                            <a href="https://maps.app.goo.gl/dfticENS5RqaSkw27" target="_blank"><img src="/images/Bharathidasan_University_logo-edu_section.png" alt="Bharathidasan school logo"></a>
+                            <div class="education-details">
+                                <h3>H.S.C STATE BOARD</h3>
+                                <ul>
+                                    <li>Pavendar Bharathidasan Government High School</li>
+                                    <li>Percentage: 46.83%</li>
+                                    <li>Year of Graduation: 2019</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="education-item" data-aos="fade-down" data-aos-delay="350">
+                        <div class="education-header">
+                            <a href="https://ghsthirukkanur1.blogspot.com/" target="_blank"><img src="/images/ghs_logo_edu_section.png" alt="GHS school logo"></a>
+                            <div class="education-details">
+                                <h3>S.S.L.C STATE BOARD</h3>
+                                <ul>
+                                    <li>Government High School</li>
+                                    <li>Percentage: 79.6%</li>
+                                    <li>Year of Graduation: 2017</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+
+            <h2 class="section-title" data-aos="fade-down" >Certificate</h2>
+
+            <div class="certificate-gallery">
+                <div class="certificate-card" data-aos="fade-down" data-aos-delay="200">
+                    <img src="/certificates/java.jpg" alt="java-certificate">
+                    <div class="certificate-info">
+                        <h2>Java</h2>
+                        <p>Solo Learn - online platform</p>
+                    </div>
+                </div>
+            
+                <div class="certificate-card" data-aos="fade-down" data-aos-delay="250">
+                    <img src="/certificates/Java ceritop1.png" alt="java-certtop-certificate">
+                    <div class="certificate-info">
+                        <h2>Java Certification</h2>
+                        <p>certiport - online platform</p>
+                    </div>
+                </div>
+            
+                <div class="certificate-card" data-aos="fade-down" data-aos-delay="300">
+                    <img src="/certificates/coursura.png" alt="coursera-python-certificate">
+                    <div class="certificate-info">
+                        <h2>IT Automation Python</h2>
+                        <p>Coursera - online platform</p>
+                    </div>
+                </div>
+               
+                <div class="certificate-card" data-aos="fade-down" data-aos-delay="350">
+                    <img src="/certificates/askon technologies .jpg" alt="askon-technologies-inplant-training-certificate">
+                    <div class="certificate-info">
+                        <h2>In Plant Training</h2>
+                        <p>Askan Technologies</p>
+                    </div>
+                </div>
+            
+                <div class="certificate-card" data-aos="fade-down" data-aos-delay="400">
+                    <img src="/certificates/Besant technology.jpg" alt="java-full-stack-developer-certificate">
+                    <div class="certificate-info">
+                        <h2>Java Full Stack Developer</h2>
+                        <p>Certified Java Full Stack Developer, Besant Technology, 2024</p>
+                        <p>Location: T.Nagar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+            <!-- Full Image Modal -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage" alt="Modal Image">
+            </div>
+            
+
+
+
+   <section  class="skills-section" id="skill" >
+<div>
+    <h1 class="skills-title"  data-aos="fade-down"> 
+        skills 
+    </h1>
+    <p data-aos="fade-down" data-aos-delay="250">
+        Here are some of my skills on which i have learnt.
+    </p>
+    <div class="skills-container" data-aos="fade-down">
+        <div class="skills-category frontend-category" >
+            <h2>Frontend</h2>
+            <div class="skill-item" data-aos="fade-right" data-aos-delay="100">
+                <img src="./images/skills-logo/Html-logo.png" alt="Html-logo">
+                <label for="html">Html</label>
+            </div>
+            <div class="skill-item" data-aos="fade-right" data-aos-delay="200">
+                <img src="./images/skills-logo/css-logo.png" alt="css-logo">
+                <label for="css">Css</label>
+            </div> 
+            <div class="skill-item" data-aos="fade-right" data-aos-delay="300">
+                <img src="./images/skills-logo/javascript-logo1.png" alt="javascript-log">
+                <label for="js">JavaScript</label>
+            </div>
+        </div>
+        <div class="skills-category backend-category">
+            <h2>BackEnd</h2>
+            <div class="skill-item" data-aos="fade-down" data-aos-delay="100">
+                <img src="./images/skills-logo/java-logo.png" alt="java-logo">
+                <label for="java">Java</label>
+            </div>
+            <div class="skill-item" data-aos="fade-down" data-aos-delay="200">
+                <img src="./images/skills-logo/mysql-logo.png" alt="mysql-logo">
+                <label for="mysql">MySQL</label>
+            </div>
+            <div class="skill-item" data-aos="fade-down" data-aos-delay="300">
+                <img src="./images/skills-logo/spring-boot-logo.png" alt="spring-boot-logo">
+                <label for="spring-boot">Spring Boot</label>
+            </div>
+        </div>
+        <div class="skills-category other-category" >
+            <h2>Others</h2>
+
+            <div class="skill-item" data-aos="fade-left" data-aos-delay="100">
+                <img src="./images/skills-logo/github_logo1.png" alt="github">
+                <label for="github">github</label>
+            </div>
+            <div class="skill-item" data-aos="fade-left" data-aos-delay="200">
+                <img src="./images/skills-logo/microsoft-powerpoint-logo.png" alt="powerpoint">
+                <label for="powerpoint">PowerPoint</label>
+            </div>
+            <div class="skill-item" data-aos="fade-left" data-aos-delay="300">
+                <img src="./images/skills-logo/microsoft-word-logo.png" alt="microsoft-word">
+                <label for="word">Ms Word</label>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- project section -->
+<p id="project1"></p>
+<section class="projects-section" id="project">
+    <div>
+        <h2  data-aos="fade-down" >
+            Projects
+        </h2>
+        <h3 class="project-description"  data-aos="fade-down" data-aos-delay="200">
+            I have worked on a wide range of projects. Here are some of my projects.
+        </h3>
+        <div class="projects-container" id="project-container">
+            <div class="filter-buttons">
+                <button onclick="filterProjects('all')"   data-aos="fade-down" data-aos-delay="250">All</button>
+                <button onclick="filterProjects('academy')"  data-aos="fade-down" data-aos-delay="300">Academy Projects</button>
+                <button onclick="filterProjects('my')"  data-aos="fade-down" data-aos-delay="350">My Projects</button>
+            </div>
+            <div class="image-container">
+                <!-- Non-Invasive Blood Group Detection Card -->
+                <div class="project-card" data-project-type="academy"  data-aos="fade-down" data-aos-delay="210" >
+                    <img src="/projects/snap2-Home page of the software.jpg" alt="NON-INVASIVE BLOOD GROUP DETECTION" class="project-img" onclick="openModal('bloodGroup')">
+                    <div class="card-content" >
+                        <div class="tech-used" data-aos="fade-down" data-aos-delay="100">
+                            <h4 class="python">Python</h4>
+                            <h4 class="flask">Flask</h4>
+                            <h4 class="sqlite">SQLite</h4>
+                        </div>
+                        <h3 class="project-heading" data-aos="fade-down" data-aos-delay="150">NON-INVASIVE BLOOD GROUP DETECTION</h3>
+                        <span class="project-year">2023</span>
+                        <p data-aos="fade-down" data-aos-delay="170">Developed a web application that uses image processing to detect blood groups. Implemented a machine learning model to classify blood groups based on extracted image features. Utilized Flask for the web interface and SQLite for managing patient records.</p>
+                    </div>
+                </div>
+                <!-- Personal Portfolio Website Card -->
+                <div class="project-card" data-project-type="my"  data-aos="fade-down" data-aos-delay="300">
+                    <img src="/projects/myportfolio.png" alt="PERSONAL PORTFOLIO WEBSITE" class="project-img" onclick="openModal('portfolio')">
+                    <div class="card-content">
+                        <div class="tech-used" data-aos="fade-down" data-aos-delay="100">
+                            <h4 class="html">HTML</h4>
+                            <h4 class="css">CSS</h4>
+                            <h4 class="javascript">JavaScript</h4>
+                        </div>
+                        <h3 class="project-heading" data-aos="fade-down" data-aos-delay="150">PERSONAL PORTFOLIO WEBSITE</h3>
+                        <span class="project-year">2024</span>
+                        <p data-aos="fade-down" data-aos-delay="180">Designed a fully responsive personal portfolio website using HTML, CSS, and JavaScript. Ensured cross-browser compatibility and responsiveness for optimal viewing across devices.</p>
+                    </div>
+                </div>
+                <!-- Another Personal Portfolio Website Card (Duplicate for Testing) -->
+                <div class="project-card" data-project-type="my"  data-aos="fade-down" data-aos-delay="350">
+                    <img src="/projects/myportfolio.png" alt="PERSONAL PORTFOLIO WEBSITE" class="project-img" onclick="openModal('portfolio')">
+                    <div class="card-content">
+                        <div class="tech-used" data-aos="fade-down" data-aos-delay="100">
+                            <h4 class="html">HTML</h4>
+                            <h4 class="css">CSS</h4>
+                            <h4 class="javascript">JavaScript</h4>
+                        </div>
+                        <h3 class="project-heading" data-aos="fade-down" data-aos-delay="150">PERSONAL PORTFOLIO WEBSITE</h3>
+                        <span class="project-year"  >2024</span>
+                        <p data-aos="fade-down" data-aos-delay="180">Designed a fully responsive personal portfolio website using HTML, CSS, and JavaScript. Ensured cross-browser compatibility and responsiveness for optimal viewing across devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Non-Invasive Blood Group Detection Modal -->
+    <div id="bloodGroupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-slider">
+                <img id="modalImg" src="/projects/snap2-Home page of the software.jpg" alt="NON-INVASIVE BLOOD GROUP DETECTION">
+            </div>
+            <div class="modal-text">
+                <h3 class="modal-h3">Detection and Identification of Blood Group by Non-invasive Method</h3>
+                <p>
+                    I. &nbsp;&nbsp;Developed a web application that uses image processing to detect blood groups.<br>
+                    II. &nbsp;&nbsp;Implemented a machine learning model to classify blood groups based on extracted image features.<br>
+                    III. &nbsp;&nbsp;Utilized Flask for the web interface and SQLite for managing patient records.<br>
+                </p>
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-btn" onclick="openSourceCode()">Source Code</button>
+                <button class="modal-btn" onclick="openProject()">Open</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Personal Portfolio Website Modal -->
+    <div id="portfolioModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-slider">
+                <img id="modalImg" src="/projects/myportfolio.png " alt="PERSONAL PORTFOLIO WEBSITE">
+            </div>
+            <div class="modal-text">
+                <h3 class="modal-h3">PERSONAL PORTFOLIO WEBSITE</h3>
+                <p>
+                    I. &nbsp;&nbsp;Designed a fully responsive personal portfolio website using HTML, CSS, and JavaScript.<br>
+                    II. &nbsp;&nbsp;Ensured cross-browser compatibility and responsiveness for optimal viewing across devices.<br>
+                    III. &nbsp;&nbsp;Utilized flexible grid layouts and media queries to adapt the design to various screen sizes.<br>
+                    IV. &nbsp;&nbsp;Implemented smooth scrolling and animations that work seamlessly on both desktop and mobile devices.<br>
+                    V. &nbsp;&nbsp;Tested the website on multiple devices to ensure consistent performance and appearance.<br>
+                </p>
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-btn" onclick="openSourceCode()">Source Code</button>
+                <a href="https://chatgpt.com/c/cf78bb7b-0615-4e13-b07a-ead685af3707"><button class="modal-btn" onclick="openProject()">Open</button></a> 
+            </div>
+        </div> 
+    </div>
+    <p id="contact"></p>
+    </section>
+
+<!-- contact form -->
+    
+<section class="contact-section" data-aos="fade-down" >
+    <h2 class="contact-title" data-aos="fade-down" data-aos-delay="100">Contact <span class="log-span">Me</span></h2>
+    <form id="contactForm" onsubmit="sendEmail(event)"> 
+        <div class="input-box" data-aos="fade-down" data-aos-delay="150">
+            <input type="email" id="email" name="email" placeholder="Email" required >
+        </div>
+        <p class="privacy-text" data-aos="fade-down" data-aos-delay="200">We'll never share your email with anyone else.</p>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required data-aos="fade-down" data-aos-delay="250"></textarea>
+        <input type="submit" value="Send" class="btn-submit" data-aos="fade-down" data-aos-delay="300">
+    </form>
+    </section>
+
+<!-- footer -->
+
+<footer class="footer">
+    <div class="social">
+        <a href="https://www.linkedin.com/in/subburathinam22/"><i class='bx bxl-linkedin'></i></a>
+        <a href="#"><i class='bx bxl-github'></i></a>
+        <a href="https://wa.me/918838553440?text=Hello,%20I%20visited%20your%20webpage%20and%20am%20interested%20in%20discussing%20potential%20opportunities.%20Could%20we%20arrange%20a%20time%20to%20chat?" target="_blank" class="whatsapp-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="mailto:subburathinam111@gmail.com?subject=From%20Portfolio&body=from:%20" class="email-icon">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+        <!-- <a href="#"><i class="fa-solid fa-envelope"></i></a> -->
+    </div>
+
+    <!-- <ul class="list">
+        <li>
+            <a href="#">FAQ</a>
+        </li>
+        <li>
+            <a href="#project1">Services</a>
+        </li>
+        <li>
+            <a href="#about">About Me</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+        <li>
+            <a href="#">Privacy Policy</a>
+        </li>
+    </ul> -->
+
+    <p class="copyright">© 2024 SubbuSoft. All Rights Reserved.</p>
+</footer>
+
+<!-- animatiion on scroll JS -->
+    
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+
+<!-- Initialize AOS -->
+<script>
+    AOS.init({
+        duration: 1200,
+        once: false,
+    });
+  </script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="script.js"></script> -->
+
+</body>
+</html>
