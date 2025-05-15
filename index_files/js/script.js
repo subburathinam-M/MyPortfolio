@@ -209,7 +209,7 @@ function sendEmail(event) {
 
 function downloadCV()
 {
-  var pdf = "./cv/subburathinam cv lat.pdf";
+  var pdf = "./cv/Subburathinam M_Resume.pdf";
   var atag = document.createElement('a');
   atag.href = pdf; 
   atag.target = "_blank";   // This opens the link in a new tab

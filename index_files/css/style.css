@@ -54,7 +54,7 @@ html {
 }
 
 section {
-    padding: 100px 0; /* Adjust padding as necessary */
+    padding: 30px 0; 
     margin: 0 auto;
 }
 
@@ -371,6 +371,115 @@ a.gmail-icon:hover {
 }
 
 
+
+
+/* Section Title */
+/* .section-title {
+    font-size: 28px;
+    color: #0d6efd;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+} */
+
+/* Section title styling */
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Work Experience Layout */
+.work-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    padding: 80px;
+    border-radius: 12px;
+    background-color: #f8f9fa;
+}
+
+/* Left Side (Text) */
+.work-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.work-left p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.highlight-heading {
+    color: #0d6efd;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    color: #0d6efd;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.work-left ul,
+.work-left ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.work-left ul li,
+.work-left ol li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Right Side (Image) */
+.work-right {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-right img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .work-container {
+        flex-direction: column-reverse;
+        padding: 15px;
+    }
+
+    .work-left,
+    .work-right {
+        text-align: center;
+    }
+
+    .work-left {
+        padding-top: 20px;
+    }
+}
+
+
+
+
 /* Education Section */
 
 .education-section {
@@ -454,11 +563,7 @@ a.gmail-icon:hover {
 
 
 
-/* Section title styling */
-.section-title {
-    text-align: center;
-    margin-bottom: 20px;
-}
+
 
 /* Certificate section styling */
 .certificate-gallery {
