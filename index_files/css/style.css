@@ -119,6 +119,10 @@ body {
     color: orangered;
 }
 
+.log-span-type {
+    color: rgb(7, 179, 247);
+}
+
 .navbar a {
     font-size: 18px;
     color: white;
@@ -389,6 +393,18 @@ a.gmail-icon:hover {
 }
 
 /* Work Experience Layout */
+
+
+#lottie-animation-1,
+#lottie-animation-2,
+#lottie-animation-3 {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+
+
 .work-container {
     display: flex;
     flex-direction: row;
@@ -414,6 +430,9 @@ a.gmail-icon:hover {
     color: #333;
     margin-bottom: 12px;
 }
+
+
+
 
 .highlight-heading {
     color: #0d6efd;
@@ -447,7 +466,7 @@ a.gmail-icon:hover {
 .work-right {
     flex: 1;
     min-width: 250px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
 }
@@ -459,6 +478,203 @@ a.gmail-icon:hover {
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* work-card */
+
+/* Animated Experience Cards */
+.exp-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.exp-card {
+    position: relative;
+    /* width: 350px; */
+    min-height: 200px;
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    color: #f1f1f1;
+}
+
+.exp-card:hover {
+    transform: translateY(-10px);
+}
+
+.exp-card::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        #4a6bff
+    );
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    animation: rotate 4s linear infinite;
+}
+
+.exp-card::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #1a1a2e;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.exp-card-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #00d4ff;
+}
+
+.exp-card-duration {
+    display: block;
+    margin-bottom: 15px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.exp-card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.exp-tech-pill {
+    background: rgba(74, 107, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #00d4ff;
+}
+
+.exp-card-overview {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: white !important;
+}
+
+/* Experience Modal Styles */
+.exp-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.exp-modal-content {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+}
+
+.exp-close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.exp-close-modal:hover {
+    color: #f1f1f1;
+}
+
+.exp-modal-title {
+    color: #00d4ff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.exp-modal-section {
+    margin-bottom: 20px;
+}
+
+.exp-modal-section-title {
+    color: #4a6bff;
+    margin: 15px 0 10px;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.exp-features-list {
+    list-style-type: none;
+}
+
+.exp-features-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.exp-features-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #00d4ff;
+}
+
+.exp-contributions-list {
+    list-style-type: none;
+}
+
+.exp-contributions-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.exp-contributions-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #00d4ff;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .exp-card {
+        width: 100%;
+    }
+    
+    .exp-modal-content {
+        margin: 20px auto;
+        padding: 20px;
+    }
+}   
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -506,6 +722,12 @@ a.gmail-icon:hover {
 }
 
 .left-section .img1 {
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+}
+
+#lottie-animation-4{
     width: 400px;
     height: 500px;
     margin: 20px;
@@ -808,7 +1030,10 @@ a.gmail-icon:hover {
 .skills-category img[alt="powerpoint"],
 .skills-category img[alt="microsoft-word"],
 .skills-category img[alt="excel"],
-.skills-category img[alt="github"] {
+.skills-category img[alt="github"],
+.skills-category img[alt="postman"],
+.skills-category img[alt="swagger"],
+.skills-category img[alt="react"]{
     transition: background-color 0.3s ease;
 }
 
@@ -830,6 +1055,10 @@ a.gmail-icon:hover {
 .skills-category img[alt="spring-boot-logo"] { border-color: #6DB33F; }
 .skills-category img[alt="spring-boot-logo"]:hover { background-color: #95c575; }
 
+
+.skills-category img[alt="mongodb-logo-logo"] { border-color: #6DB33F; }
+.skills-category img[alt="mongodb-logo"]:hover { background-color: #95c575; }
+
 .skills-category img[alt="powerpoint"] { border-color: #D24726; }
 .skills-category img[alt="powerpoint"]:hover { background-color: #D24726; }
 
@@ -842,7 +1071,14 @@ a.gmail-icon:hover {
 .skills-category img[alt="github"] { border-color: #000000; }
 .skills-category img[alt="github"]:hover { background-color: #808080; }
 
+.skills-category img[alt="postman"] { border-color:rgb(234, 158, 18); }
+.skills-category img[alt="postman"]:hover { background-color: rgb(251, 168, 14); }
 
+.skills-category img[alt="swagger"] { border-color:rgb(5, 137, 5); }
+.skills-category img[alt="swagger"]:hover { background-color: rgb(16, 215, 16); }
+
+.skills-category img[alt="react"] { border-color:rgb(124, 194, 222); }
+.skills-category img[alt="react"]:hover { background-color: rgb(120, 217, 255); }
 
 
 /* Project Section */

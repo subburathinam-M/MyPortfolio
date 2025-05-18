@@ -15,7 +15,66 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // animationn typing 
+    
+    var typed = new Typed("#typing-text", {
+        strings: ["Java Developer","MongoDB Beginner",  "Spring Boot Developer", "Backend Developer", "REST API Developer","Learning Laravel & PHP"],
+        typeSpeed: 50,
+        backSpeed: 25,
+        backDelay: 1500,
+        loop: true
+      });
+
+// amiation images lottaie 
+
+    //   var animation = lottie.loadAnimation({
+    //     container: document.getElementById('lottie-animation'),
+    //     renderer: 'svg',
+    //     loop: true,
+    //     autoplay: true,
+    //     path: './images/Animation_lottiefiles_dev1.json' // replace with your actual path
+    //   });
+
+    // First animation
+  lottie.loadAnimation({
+    container: document.getElementById('lottie-animation-1'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './images/Animation_lottiefiles_dev1.json' // Replace with actual path
+  });
+
+  // Second animation
+  lottie.loadAnimation({
+    container: document.getElementById('lottie-animation-2'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './images/Animation_lottiefiles_dev2.json' // Replace with second animation file path
+  });
+
+
+  // Third animation
+  lottie.loadAnimation({
+    container: document.getElementById('lottie-animation-3'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './images/Animation_lottiefiles_dev3.json' // Replace with second animation file path
+  });
+
+    // four animation
+    lottie.loadAnimation({
+        container: document.getElementById('lottie-animation-4'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './images/Animation_lottiefiles_dev5.json' // Replace with second animation file path
+      });
+
 });
+
 
 
 
@@ -185,8 +244,13 @@ function sendEmail(event) {
 
       // Validate email
       if (!validateEmail(email)) {
-        alert('Please enter a valid email address (e.g., subbu@gmail.com or subbu@gmail.org).');
-        return; // Stop further execution if the email is invalid
+        Swal.fire({
+            title: "Invalid Email",
+            text: "Please enter a valid email address (e.g., subbu@gmail.com or subbu@gmail.org).",
+            icon: "error",
+            confirmButtonColor: "#0d6efd"
+        });
+        return;
     }
 
 
@@ -195,15 +259,29 @@ function sendEmail(event) {
         email: email,
         message: message
     };
-
+// Send email using EmailJS
     emailjs.send('service_p72apgc', 'template_m6cwqfh', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
-            alert('Your message has been sent successfully!');
+            // alert('Your message has been sent successfully!');
+            Swal.fire({
+                title: "Success!",
+                text: "Your message has been sent successfully!",
+                icon: "success",
+                confirmButtonColor: "#0d6efd"
+            });
+             // Optionally reset form after success
+            document.getElementById("contactForm").reset();
         }, function(error) {
             console.error('FAILED...', error);
-            alert('Failed to send your message. Please try again later.');
+            // alert('Failed to send your message. Please try again later.');
             console.error('Error details:', error);
+            Swal.fire({
+                title: "Oops!",
+                text: "Failed to send your message. Please try again later.",
+                icon: "error",
+                confirmButtonColor: "#d33"
+            });
         });
 }
 
@@ -239,4 +317,45 @@ function navigateToSection(sectionId) {
         hideSidebar(); // Close the sidebar after scrolling
     }
 }
+
+
+
+// Experience Modal functions
+function openExpModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeExpModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside content
+window.onclick = function(event) {
+    if (event.target.className === 'exp-modal') {
+        event.target.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Close modal with ESC key
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.key === "Escape") {
+        const modals = document.getElementsByClassName('exp-modal');
+        for (let modal of modals) {
+            if (modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+    }
+};
+
+
+
+
+
+
 
