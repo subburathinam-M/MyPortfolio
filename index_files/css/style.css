@@ -221,7 +221,7 @@ body {
 
 .home-section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: rgb(241, 241, 241);
     display: flex;
     align-items: center;
@@ -1519,15 +1519,6 @@ a.gmail-icon:hover {
     overflow-x: hidden;
   }
 
-  .home-section {
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgb(241, 241, 241);
-    display: flex;
-    align-items: center;
-    gap: 7em;
-    padding: 30px 12% 0; 
-}
     .navbar {
         padding: 10px 5%;
     }
