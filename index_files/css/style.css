@@ -1506,10 +1506,16 @@ a.gmail-icon:hover {
     }
     
 }
-
+/* --------------------------------------end-------------- */
 
 /* Additional Responsive Adjustments for Smaller Screens */ 
 @media screen and (max-width: 480px) {
+
+    /* Base adjustments */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 
     .navbar {
         padding: 10px 5%;
@@ -1565,6 +1571,8 @@ a.gmail-icon:hover {
 }
 }
 
+
+/* ---------------------------------------end------------------------------------------------------------------- */
 
 
 /* For extra small devices (phones, less than 600px) */
