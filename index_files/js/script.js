@@ -303,10 +303,14 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
 
 function showSidebar(){
     const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.remove('right-[-100%]'); // Tailwind slide-out position
+    sidebar.classList.add('right-0'); // Tailwind slide-in position
     sidebar.style.display = 'flex';
 }
 function hideSidebar(){
     const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.remove('right-0');
+        sidebar.classList.add('right-[-100%]');
     sidebar.style.display = 'none';
 }
 
