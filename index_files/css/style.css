@@ -41,6 +41,10 @@
     box-sizing: border-box;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -51,6 +55,8 @@
 
 html {
     scroll-behavior: smooth; /* Enable smooth scrolling */
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 section {
@@ -79,7 +85,10 @@ section {
 
 body {
     color: black;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* min-height: 100vh; */
     overflow-x: hidden;
     position: relative;
 }
@@ -1433,7 +1442,7 @@ a.gmail-icon:hover {
     border-radius: 50%;
     margin: 0 8px;
     box-shadow:inset 0 0 10px orangered,
-                     0 0 10px orangered;
+                    0 0 10px orangered;
     transition: 0.3s ease;
 }
 
@@ -1487,6 +1496,76 @@ a.gmail-icon:hover {
 
 
 /* Media Queries for Responsive Design */
+
+
+
+@media (max-width:400px){
+
+    .sidebar{
+        width: 50%;
+    }
+    
+}
+
+
+/* Additional Responsive Adjustments for Smaller Screens */ 
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        padding: 10px 5%;
+    }
+
+    .navbar a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    footer a {
+        margin: 0 5px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    /* Style for menu-button */
+.menu-button {
+    display: block; /* Ensure the button is visible */
+    color: white; /* Ensure this is visible */
+    margin: 0 10px; /* Adjust as needed */
+    padding: 10px;
+    position: relative; /* Ensure it’s in the document flow */
+    z-index: 200; /* Ensure it's above other elements */
+}
+
+/* Style for SVG inside .menu-button */
+.menu-button svg {
+    fill: white; /* Ensure the SVG color is white */
+    width: 40px; /* Increase size for better visibility */
+    height: 40px; /* Increase size for better visibility */
+}
+}
+
+
 
 /* For extra small devices (phones, less than 600px) */
 @media screen and (max-width: 600px) {
@@ -1558,11 +1637,11 @@ a.gmail-icon:hover {
         padding: 12px 15px;
     }
 
-
+/* Hide menu items on smaller screens */
     .hide-on-mobile {
-        display: none; /* Hide menu items on smaller screens */
+        display: none; 
     }
-
+    
     
     .menu-button{
         display: block;
@@ -2006,16 +2085,8 @@ a.gmail-icon:hover {
 }
 
 
-
-
-
-
-
-
-
-
 /* For small devices (landscape phones, 600px and up) */
-@media screen and (min-width: 600px) and (max-width: 768px) {
+@media screen and (min-width: 601px) and (max-width: 768px) {
 
     
       /* Prevent horizontal scroll due to overflow */
@@ -2403,51 +2474,23 @@ a.gmail-icon:hover {
     }
 }
 
+
 /* For medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) and (max-width: 992px) {
 
-        
-      /* Prevent horizontal scroll due to overflow */
-      html,body {
+     /* Prevent horizontal scroll due to overflow */
+     html,body {
         margin: 0;
         padding: 0;
         overflow-x: hidden;
     }
-     
-         /* General container and section adjustments */
-     .container, .section, .header, .home-section, .about-section, .contact-section {
-         width: 100%;
-         box-sizing: border-box; /* Ensures padding doesn't cause overflow */
-     }
-     
-    .footer {
-        padding: 35px 0;
+
+      /* General container and section adjustments */
+      .container, .section, .header, .home-section, .about-section, .contact-section {
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding doesn't cause overflow */
     }
-
-    .footer .social a {
-        font-size: 22px;
-        width: 38px;
-        height: 38px;
-        line-height: 36px;
-    }
-
-    .footer ul {
-        font-size: 18px;
-    }
-
-    .footer ul li {
-        display: inline-block;
-        padding: 0 12px;
-    }
-
-    .footer .copyright {
-        font-size: 12px;
-    }
-
-}
-
-/* For medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) and (max-width: 992px) {
+    
 
     /* Header adjustments */
     .header {
@@ -2818,7 +2861,7 @@ a.gmail-icon:hover {
 }
 
 /* For large devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
 
     
       /* Prevent horizontal scroll due to overflow */
@@ -3163,68 +3206,11 @@ a.gmail-icon:hover {
 }
 
 
-/* Additional Responsive Adjustments for Smaller Screens */
-@media screen and (max-width: 480px) {
-
-    
-    .navbar {
-        padding: 10px 5%;
-    }
-
-    .navbar a {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    section {
-        padding: 10px;
-    }
-
-    footer {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    footer a {
-        margin: 0 5px;
-    }
-
-    .contact-form input, .contact-form textarea {
-        width: 100%;
-        padding: 8px;
-    }
-
-    .contact-form button {
-        width: 100%;
-        padding: 12px;
-    }
-
-    .hide-on-mobile {
-        display: none;
-    }
-
-    /* Style for menu-button */
-.menu-button {
-    display: block; /* Ensure the button is visible */
-    color: white; /* Ensure this is visible */
-    margin: 0 10px; /* Adjust as needed */
-    padding: 10px;
-    position: relative; /* Ensure it’s in the document flow */
-    z-index: 200; /* Ensure it's above other elements */
-}
-
-/* Style for SVG inside .menu-button */
-.menu-button svg {
-    fill: white; /* Ensure the SVG color is white */
-    width: 40px; /* Increase size for better visibility */
-    height: 40px; /* Increase size for better visibility */
-}
-}
 
 @media (max-width:800px){
 
     .hide-on-mobile{
-         display: none;
+        display: none;
     }
 
     .menu-button{
@@ -3253,11 +3239,4 @@ a.gmail-icon:hover {
     
 }
 
-@media (max-width:400px){
-
-    .sidebar{
-        width: 50%;
-    }
-    
-}
 
