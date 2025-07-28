@@ -14,17 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-    });
+});
 
-    // animationn typing 
-    
+    // animationn typing
+
     var typed = new Typed("#typing-text", {
         strings: ["Java Developer","MongoDB Beginner",  "Spring Boot Developer", "Backend Developer", "REST API Developer","Learning Laravel & PHP"],
         typeSpeed: 50,
         backSpeed: 25,
         backDelay: 1500,
         loop: true
-      });
+    });
 
 // amiation images lottaie 
 
@@ -217,7 +217,6 @@ function openSourceCode() {
 function openProject() {
     alert("Opening project...");
 }
-  
 
 
 
